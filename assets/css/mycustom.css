@@ -1,6 +1,6 @@
 /*fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Dancing Script&family=Poppins:wght@200;300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;600&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@500;700&family=Nunito:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap');
 
 /*default*/
 body {
@@ -12,7 +12,8 @@ body {
 }
 
 *:not(i) {
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-weight: 
 }
 * {
   margin: 0;
@@ -296,6 +297,13 @@ footer {
   padding: 80px 0 80px;
 }
 
+.bridegroom-banner {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
 .bridegroom-section .container {
 	min-height: 100vh;
 }
@@ -366,6 +374,7 @@ footer {
 	width: 300px;
 	margin: 10px;
 	border-radius: 15px;
+  border: 3px solid #A19882;
 }
 
 .event-section .card-title h2 {
@@ -385,16 +394,222 @@ footer {
 	display: block;
 	text-align: center;
 	margin: 20px 50px;
-	border-radius: 10px
+	border-radius: 50px
 }
 
-.event-section .card:hover {
-	background-color: #E1F1DD;
-	color: #2F5D62;
-	/*cursor: pointer;*/
+.event-section .card-body a:hover {
+  background-color: #053742;
+  color: #ffffff;
 	transform: scale(1.03);
 	transition: all .5s ease;
 }
+
+
+.event-section .add-calendar {
+  padding: 20px;
+}
+
+.event-section .add-calendar p {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.event-section .add-button {
+  background-color: #E98580;
+  color: #ffffff;
+  padding: 15px 20px;
+  display: block;
+  text-align: center;
+  margin: 20px 50px;
+  border-radius: 50px;
+}
+
+.event-section .add-button:hover {
+  background-color: #053742;
+  /*color: #000000;*/
+  transform: scale(1.03);
+  transition: all .5s ease;
+}
+
+
+
+/*countdown*/
+.countdown {
+  width: 720px;
+  margin: 0 auto;
+}
+.countdown .countdown-title h2 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 50px 15px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 34px;
+  text-shadow: 1px 1px #3A6351;
+}
+.countdown .bloc-time {
+  float: left;
+  margin-right: 45px;
+  text-align: center;
+}
+.countdown .bloc-time:last-child {
+  margin-right: 0;
+}
+.countdown .count-title {
+  display: block;
+  margin-bottom: 15px;
+  font: normal 0.94em "Nunito";
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+.countdown .figure {
+  position: relative;
+  float: left;
+  height: 110px;
+  width: 100px;
+  margin-right: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  -moz-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+  -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+}
+.countdown .figure:last-child {
+  margin-right: 0;
+}
+.countdown .figure > span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font: normal 5.94em/107px "Nunito";
+  font-weight: 700;
+  color: #de4848;
+}
+.countdown .figure .top:after,
+.countdown .figure .bottom-back:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.countdown .figure .top {
+  z-index: 3;
+  background-color: #f7f7f7;
+  transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  -moz-transform: perspective(200px);
+  -ms-transform: perspective(200px);
+  -webkit-transform: perspective(200px);
+  transform: perspective(200px);
+}
+.countdown .figure .bottom {
+  z-index: 1;
+}
+.countdown .figure .bottom:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.countdown .figure .bottom-back {
+  z-index: 2;
+  top: 0;
+  height: 50%;
+  overflow: hidden;
+  background-color: #f7f7f7;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.countdown .figure .bottom-back span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.countdown .figure .top,
+.countdown .figure .top-back {
+  height: 50%;
+  overflow: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.countdown .figure .top-back {
+  z-index: 4;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -moz-transform: perspective(200px) rotateX(180deg);
+  -ms-transform: perspective(200px) rotateX(180deg);
+  -webkit-transform: perspective(200px) rotateX(180deg);
+  transform: perspective(200px) rotateX(180deg);
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.countdown .figure .top-back span {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.location {
+  /*font-size: 28px;*/
+  color: #000000;
+  font-weight: 700;
+  /*font-family: "Dancing Script", cursive;*/
+  margin: 300px auto 20px;
+  text-align: center;
+}
+
+.location .location-title h2 {
+  font-size: 40px;
+  color: #000000;
+  font-weight: 700;
+  text-shadow: 1px 1px #3A6351;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -509,6 +724,94 @@ footer {
 	  font-family: 'Courgette', cursive;
 	}
 
+  /*carousell*/
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Hide the images by default */
+    .slide {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .slideshow-container .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      margin-left: 20px;
+      padding: 16px;
+      color: #f08fc0;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.6s ease;
+      border-radius: 20px;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .slideshow-container .next {
+      right: 0;
+      color: #f08fc0;
+      font-size: 14px;
+      transition: 0.6s ease;
+      border-radius: 20px;
+      margin-right: 20px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .slideshow-container .prev:hover,
+    .next:hover {
+      background: none;
+    }
+
+    .slideshow-container .next:hover {
+      background: none;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation: fade ease 5s;
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
 	/*bridegroom*/
 	.bridegroom-section {
 	  padding: 20px 0 20px;
@@ -523,7 +826,7 @@ footer {
 	}
 
 	.couple-heading h2 {
-		font-size: 30px;
+		font-size: 24px;
 		font-family: "Dancing Script", cursive;
 		margin: 15px 0;
 		font-weight: normal;
@@ -533,10 +836,165 @@ footer {
 	}
 
 	.couple-body h3 {
-	  font-size: 16px;
+	  font-size: 14px;
 	  margin: 15px 0;
 	  font-weight: normal;
 	  letter-spacing: 2px;
 	}
+
+  .couple-body p {
+    font-size: 12px;
+    margin: 15px 0;
+    font-weight: normal;
+    /*letter-spacing: 2px;*/
+  }
+
+
+  /*countdown*/
+  .countdown {
+      width: 720px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .countdown .countdown-title h2 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 50px 15px;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 24px;
+      text-shadow: 1px 1px #3A6351;
+    }
+    .countdown .bloc-time {
+      float: left;
+      margin-right: 45px;
+      text-align: center;
+    }
+    .countdown .bloc-time:last-child {
+      margin-right: 0;
+    }
+    .countdown .count-title {
+      display: block;
+      margin-bottom: 15px;
+      font: normal 0.94em "Nunito";
+      color: #1a1a1a;
+      text-transform: uppercase;
+    }
+    .countdown .figure {
+      position: relative;
+      float: left;
+      height: 110px;
+      width: 100px;
+      margin-right: 10px;
+      background-color: #fff;
+      border-radius: 8px;
+      -moz-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+      -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+      box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+    }
+    .countdown .figure:last-child {
+      margin-right: 0;
+    }
+    .countdown .figure > span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      font: normal 5.94em/107px "Nunito";
+      font-weight: 700;
+      color: #de4848;
+    }
+    .countdown .figure .top:after,
+    .countdown .figure .bottom-back:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .countdown .figure .top {
+      z-index: 3;
+      background-color: #f7f7f7;
+      transform-origin: 50% 100%;
+      -webkit-transform-origin: 50% 100%;
+      -moz-border-radius-topleft: 10px;
+      -webkit-border-top-left-radius: 10px;
+      border-top-left-radius: 10px;
+      -moz-border-radius-topright: 10px;
+      -webkit-border-top-right-radius: 10px;
+      border-top-right-radius: 10px;
+      -moz-transform: perspective(200px);
+      -ms-transform: perspective(200px);
+      -webkit-transform: perspective(200px);
+      transform: perspective(200px);
+    }
+    .countdown .figure .bottom {
+      z-index: 1;
+    }
+    .countdown .figure .bottom:before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+    .countdown .figure .bottom-back {
+      z-index: 2;
+      top: 0;
+      height: 50%;
+      overflow: hidden;
+      background-color: #f7f7f7;
+      -moz-border-radius-topleft: 10px;
+      -webkit-border-top-left-radius: 10px;
+      border-top-left-radius: 10px;
+      -moz-border-radius-topright: 10px;
+      -webkit-border-top-right-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .countdown .figure .bottom-back span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    .countdown .figure .top,
+    .countdown .figure .top-back {
+      height: 50%;
+      overflow: hidden;
+      -moz-backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .countdown .figure .top-back {
+      z-index: 4;
+      bottom: 0;
+      background-color: #fff;
+      -webkit-transform-origin: 50% 0;
+      transform-origin: 50% 0;
+      -moz-transform: perspective(200px) rotateX(180deg);
+      -ms-transform: perspective(200px) rotateX(180deg);
+      -webkit-transform: perspective(200px) rotateX(180deg);
+      transform: perspective(200px) rotateX(180deg);
+      -moz-border-radius-bottomleft: 10px;
+      -webkit-border-bottom-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      -moz-border-radius-bottomright: 10px;
+      -webkit-border-bottom-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .countdown .figure .top-back span {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
 
 }
