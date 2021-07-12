@@ -436,7 +436,6 @@ footer {
 /*countdown*/
 .countdown {
   width: 780px;
-  
   margin: 40px auto;
   text-align: center;
 }
@@ -754,20 +753,23 @@ footer {
 
   /*countdown*/
   .countdown {
-    color: #333;
     margin: 0 auto;
     text-align: center;
     width: 100%;
-    border: 4px solid #ccc;
-    border-radius: 20px;
     }
+
+  .countdown-body {
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    color: #333;
+  }
   .countdown li {
-    font-size: 1.125rem;
+    font-size: .6rem;
     padding: .75rem;
   }
   
   .countdown li span {
-    font-size: 3.375rem;
+    font-size: 2.5rem;
   }
 
   /*location*/
