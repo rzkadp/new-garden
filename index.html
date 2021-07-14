@@ -14,7 +14,7 @@
   </head>
   <body>
   	<!-- home section -->
-  	<section class="home-section">
+  	<section class="home-section" id="home-section">
   		<div class="banner" style="background-image: url('assets/img/banner/img-banner-1.jpg');">
   			<!-- <img src="assets/img/banner/img-banner.JPG"> -->
   			<div class="container">
@@ -46,7 +46,7 @@
 
   	<!-- love story section -->
 
-  	<section class="lovestory-section">
+  	<section class="lovestory-section" id="lovestory-section">
 			<div class="row">
 				<div class="section-title">
 					<h2>Our Love Story</h2>
@@ -114,7 +114,7 @@
   	<!-- end of love story section
 
   	<!-- bridegroom section -->
-  	<section class="bridegroom-section">
+  	<section class="bridegroom-section" id="bridegroom-section">
   		<div class="bridegroom-banner" style="background-image: url('');">
 	  		<div class="container">
 	  			<div class="row">
@@ -166,7 +166,7 @@
   	<!-- end of bridegroom section -->
 
   	<!-- event section -->
-  	<section class="event-section">
+  	<section class="event-section" id="event-section">
   		<div class="section-title">
 			<h2>Event</h2>
 		</div>
@@ -287,7 +287,7 @@
   	<!-- end of event section -->
 
   	<!-- galery section -->
-  	<section class="galery-section">
+  	<section class="galery-section" id="galery-section">
 	  	<div class="section-title">
 	  		<h2>Galery</h2>
 	  	</div>
@@ -359,7 +359,7 @@
 
 
   	<!-- guest section -->
-  	<section class="guest">
+  	<section class="guest" id="guest-section">
   		<div class="section-title">
 			<h2>Guest</h2>
 		</div>
@@ -391,17 +391,17 @@
   	<!-- end of guest section -->
 
   	<!-- bottom navbar -->
-  	<section class="navbar-section">
+  	<footer class="navbar-section">
   		<div class="navbar">
 		  <div class="navbar-inner">
-		     <a href="#"><i class="fas fa-home"></i></a>
-		     <a href="#"><i class="fas fa-book-reader"></i></a>
-		     <a href="#"><i class="fas fa-id-card"></i></a>
-		     <a href="#"><i class="fas fa-calendar-check"></i></a>
-		     <a href="#"><i class="fas fa-images"></i></a>
+		     <a href="#home-section"><i class="fas fa-home"></i></a>
+		     <a href="#lovestory-section"><i class="fas fa-book-reader"></i></a>
+		     <a href="#bridegroom-section"><i class="fas fa-id-card"></i></a>
+		     <a href="#event-section"><i class="fas fa-calendar-check"></i></a>
+		     <a href="#guest-section"><i class="fas fa-images"></i></a>
 		  </div>
 		</div>
-  	</section>
+  	</footer>
   	
 
 
@@ -412,6 +412,34 @@
   	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   	<script type="text/javascript" src="assets/js/myscript.js"></script>
+
+
+  	<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 800, function(){
+		   
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		});
+	</script>
 
   </body>
 </html>

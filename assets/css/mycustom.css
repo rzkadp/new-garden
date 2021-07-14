@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@500;700&family=Nunito:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap');
 
 /*default*/
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   line-height: 1.5;
@@ -184,10 +187,6 @@ footer {
   padding: 0 15px;
   text-align: center;
 }
-
-/* .lovestory-content h2 {
-  font-family: 'Poppins', sans-serif;
-} */
 
 .lovestory-content p {
   font-size: 14px;
@@ -957,7 +956,7 @@ footer {
 
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 530px) {
 
   .navbar {
     overflow: hidden;
