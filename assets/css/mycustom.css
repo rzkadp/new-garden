@@ -300,7 +300,7 @@ footer {
   background-position: center;
   background-size: cover;
   position: relative;
-  z-index: 1;
+  z-index: -1;
 }
 
 .bridegroom-section .container {
@@ -582,11 +582,16 @@ footer {
 
 
 /*bottom navbar*/
+.navbar-section {
+  /*min-height: 100vh;*/
+}
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: rgba(12,3,2,0.2);
   position: fixed;
+  z-index: 1;
   bottom: 0;
+  padding: 5px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -595,18 +600,25 @@ footer {
 }
 
 .navbar a {
-  color: #f2f2f2;
+  color: #D99879;
   text-align: center;
   display: inline-block;
-  padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
   margin: 0px auto;
 }
 
-.navbar a:hover {
-  background: #f1f1f1;
+.navbar i:hover {
+  background: #DF5E5E;
   color: black;
+  transition: all 1s ease;
+}
+
+.navbar i {
+  border: 2px solid #D99879;
+  padding: 10px;
+  margin: 0 20px;
+  border-radius: 10px;
 }
 
 
@@ -626,7 +638,7 @@ footer {
 
 
 /*Responsive Media*/
-@media only screen and (max-width: 768px) {
+@media only screen  and (max-width: 768px) {
 	.section-title h2 {
 		font-size: 46px;
 	}
@@ -638,7 +650,7 @@ footer {
 	}
 
 	.home-section .banner {
-	  background-position: center;
+	  background-position: left;
 	  background-size: cover;
 	  position: relative;
 	  z-index: 1;
@@ -922,7 +934,48 @@ footer {
     color: #f2f2f2;
     text-align: center;
     display: inline-block;
-    padding: 14px 22px;
+    padding: 5px 17px;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 0px auto;
+  }
+
+  .navbar a:hover {
+    background: #f1f1f1;
+    color: black;
+  }
+
+  .navbar i {
+    border: 2px solid #D99879;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 10px;
+  }
+
+}
+
+
+
+
+@media only screen and (max-width: 400px) {
+
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    display: inline-block;
+    padding: 5px 5px;
     text-decoration: none;
     font-size: 20px;
     margin: 0px auto;
@@ -931,5 +984,12 @@ footer {
   .navbar a:hover {
     background: #f1f1f1;
     color: black;
+  }
+
+  .navbar i {
+    border: 2px solid #D99879;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 10px;
   }
 }
