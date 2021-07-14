@@ -57,6 +57,10 @@ a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+.divider {
+  background-color: #000000;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -508,6 +512,8 @@ a {
 /*galery section*/
 .galery-section {
   min-height: 100vh;
+  padding: 30px 0 80px;
+  min-height: 100vh;
 }
 
 .galery-section .galery-container {
@@ -538,6 +544,11 @@ a {
   clear: both;
 }
 
+.galery-container h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
 .galery-section .card img {
   background: white;
   width: 230px;
@@ -566,7 +577,12 @@ a {
 }
 
 .video-container .row {
-  margin: 0 -5px;
+  margin: 0 0 50px;
+}
+
+.video-container .row h2 {
+  font-size: 30px;
+  text-transform: uppercase;
 }
 
 .video-container .row:after {
@@ -581,7 +597,7 @@ a {
   background: white;
   width: 720px;
   height: 480px;
-  margin: 10px;
+  margin: 10px auto;
   position: relative;
   left: 0;
   top: 0;
@@ -591,15 +607,99 @@ a {
 
 /*guest section*/
 .guest-section {
-
+  min-height: 100vh;
+  padding: 30px 0 80px;
+  min-height: 100vh;
+}
+.guest-form {
+  width: 500px;
+  margin: 40px auto;
+  text-align: left;
+  padding: 20px 20px;
+  border: 2px solid #F38BA0;
+  border-radius: 10px;
+  /*box-shadow: 10px 10px 10px rgba(21,3,10,0.1);*/
 }
 
-.guest-header {
-
+.guest-form input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #F38BA0;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.guest-form textarea[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #F38BA0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
 }
 
-.guest-body {
+.guest-form button {
+  width: 100%;
+  background-color: #DF5E5E;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
+.guest-form button:hover {
+  background-color: #FFBCBC;
+  transition: .5s ease;
+}
+
+.guest-message {
+  text-align: center;
+}
+
+.guest-message .message {
+  width: 500px;
+  margin: 10px auto;
+  text-align: left;
+  padding: 20px 20px;
+  border: 2px solid #F38BA0;
+  border-radius: 10px;
+  /*box-shadow: 10px 10px 10px rgba(21,3,10,0.1);*/
+}
+
+.message {
+  background: #FDD2BF;
+  color: #000000;
+  padding: 15px;
+  width: 50%;
+  height: 500px;
+  overflow: scroll;
+  border: 1px solid #ccc;
+  overflow-x: hidden;
+}
+
+.guest-gift {
+  width: 200px;
+  margin: 100px auto 100px;
+}
+
+.guest-gift h2 {
+  text-align: center;
+}
+
+.gift input[type=submit] {
+  width: 100%;
+  background-color: #F38BA0;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 
@@ -641,6 +741,24 @@ a {
   padding: 10px;
   margin: 0 20px;
   border-radius: 10px;
+}
+
+.footer {
+  padding: 0 60px 100px;
+  text-align: center;
+  position: relative;
+}
+
+.footer img {
+  width: 100px;
+}
+.footer h2 {
+  text-align: center;
+  font-size: 12px;
+  font-weight: normal;
+  color: #000000;
+  font-family: "Nunito", cursive;
+  margin: 0;
 }
 
 
@@ -951,7 +1069,7 @@ a {
     background: white;
     width: 100%;
     height: 100%;
-    margin: 10px;
+    margin: 10px auto;
     position: relative;
     left: 0;
     top: 0;
@@ -973,7 +1091,7 @@ a {
     color: #f2f2f2;
     text-align: center;
     display: inline-block;
-    padding: 5px 17px;
+    padding: 5px 10px;
     text-decoration: none;
     font-size: 30px;
     margin: 0px auto;
@@ -981,9 +1099,38 @@ a {
 
   .navbar i {
     border: 2px solid #D99879;
-    padding: 10px;
+    padding: 8px;
     margin: 0 5px;
     border-radius: 10px;
+  }
+
+  /*guest section*/
+  .guest-form {
+    width: 80%;
+  }
+
+  .guest-form button:hover {
+    background-color: #FFBCBC;
+    transition: .5s ease;
+  }
+
+  .guest-message {
+    text-align: center;
+  }
+
+  .guest-message .message {
+    width: 80%;
+  }
+
+  .message {
+    background: #FDD2BF;
+    color: #000000;
+    padding: 15px;
+    width: 50%;
+    height: 500px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+    overflow-x: hidden;
   }
 
 }
@@ -1012,7 +1159,7 @@ a {
     color: #f2f2f2;
     text-align: center;
     display: inline-block;
-    padding: 5px 5px;
+    padding: 2px 3px;
     text-decoration: none;
     font-size: 20px;
     margin: 0px auto;
@@ -1020,8 +1167,8 @@ a {
 
   .navbar i {
     border: 2px solid #D99879;
-    padding: 10px;
-    margin: 0 5px;
+    padding: 7px;
+    margin: 0 3px;
     border-radius: 10px;
   }
 }
