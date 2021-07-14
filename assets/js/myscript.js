@@ -1,3 +1,16 @@
+// change color navbar when scroll
+$(document).ready(function () {
+                    $(window).scroll(function () {
+                        if ($(window).scrollTop() >= 50) {
+                            $(".navbar").css("background-color", "#2C2E43");
+                        } else {
+                            $(".navbar").css("background-color", "transparent");
+                        }
+                    });
+                });
+
+
+// slider story
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -48,8 +61,6 @@ function showSlides(n) {
 
 
 // Create Countdown
-
-
 (function () {
   const second = 1000,
         minute = second * 60,
